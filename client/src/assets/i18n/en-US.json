@@ -1,0 +1,20 @@
+{
+  "LOGIN": {
+    "NEXT": "Next",
+    "SIGN_IN": "Sign In"
+  },
+  "NOTIFICATION": {
+    "SEEDETAILS": "See Details"
+},
+"NOTIFICATIONDETAILS": {
+  "NAME": "Lead at risk due to reduced lead score",
+  "DESC":"If the auto assigned Lead Score gets reduced based on the Lead score algorithm model applied, a notification will be sent to the Lead owner to take necessary action to ensure the lead is not lost.",
+"RECIPIENTS":"Recipients",
+"SEND_TO":"Send to",
+"CONDITION_BASED_ON":"Conditions based on",
+"SEND_NOTIFICATION_IF":"Send notification if",
+"ADD_MORE_CONDITION":"Add more conditions",
+"SAVE":"Save",
+"CANCEL":"Cancel"
+}
+}

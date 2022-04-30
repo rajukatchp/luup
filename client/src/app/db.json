@@ -1,0 +1,288 @@
+{
+  "workflows": [
+    {
+      "actions": [
+        {
+          "api": "",
+          "parameters": "",
+          "title": "",
+          "type": ""
+        },
+        {
+          "api": "",
+          "parameters": "",
+          "title": "",
+          "type": ""
+        }
+      ],
+      "conditions": [
+        {
+          "attributeName": "opty.owner.name",
+          "attributeValue": "Ajay",
+          "operator": "lessthan",
+          "conditionsOperator": ""
+        }
+      ],
+      "template": {
+        "description": "MissedClosedDate",
+        "createdBy": "User",
+        "title": "MissedClosedDate",
+        "type": "teamoutlook",
+        "recipientsTo": "user@test.com",
+        "recipientsCc": "user@test.com",
+        "recipientsBcc": "user@test.com"
+      },
+      "frequencyTime": "2022-04-17T09:55:56.918Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T09:56:02.567Z",
+      "workflowName": "Missed Closed Date11",
+      "frequency": "daily",
+      "entity": "lead",
+      "isActive": true,
+      "workflowDesc": "WorkFlow Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date11\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"wrap\":true,\"text\":\"MissedClosedDate\"}],\"actions\":[{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 1
+    },
+    {
+      "actions": [],
+      "template": {
+        "description": "MissedClosedDate",
+        "createdBy": "User",
+        "title": "MissedClosedDate",
+        "type": "team",
+        "recipientsTo": "",
+        "recipientsCc": "",
+        "recipientsBcc": ""
+      },
+      "frequencyTime": "2022-04-17T07:31:22.117Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T07:31:26.717Z",
+      "workflowName": "Missed Closed Date",
+      "frequency": "",
+      "entity": "lead",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"Missed Closed Date\",\"wrap\":true}],\"actions\":[{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 2
+    },
+    {
+      "actions": [],
+      "template": {
+        "description": "MissedClosedDate",
+        "createdBy": "User",
+        "title": "MissedClosedDate",
+        "type": "team",
+        "recipientsTo": "user@test.com",
+        "recipientsCc": "user@test.com",
+        "recipientsBcc": "user@test.com"
+      },
+      "frequencyTime": "2022-04-17T07:32:36.113Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T07:33:27.877Z",
+      "workflowName": "Missed Closed Date",
+      "frequency": "daily",
+      "entity": "lead",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"Missed Closed Date\",\"wrap\":true}],\"actions\":[{\"type\":\"Action.Submit\",\"title\":\"Title\",\"api\":\"API\",\"parameters\":\"Parameters\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 3
+    },
+    {
+      "actions": [],
+      "template": {
+        "description": "MissedClosedDate",
+        "createdBy": "User",
+        "title": "MissedClosedDate",
+        "type": "team",
+        "recipientsTo": "",
+        "recipientsCc": "",
+        "recipientsBcc": ""
+      },
+      "frequencyTime": "2022-04-17T07:36:24.991Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T07:36:54.468Z",
+      "workflowName": "Missed Closed Date",
+      "frequency": "",
+      "entity": "lead",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"Missed Closed Date\",\"wrap\":true}],\"actions\":[{\"type\":\"Action.Submit\",\"title\":\"Title\",\"api\":\"API\",\"parameters\":\"\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 4
+    },
+    {
+      "actions": [],
+      "template": {
+        "description": "MissedClosedDate",
+        "createdBy": "User",
+        "title": "MissedClosedDate",
+        "type": "team",
+        "recipientsTo": "",
+        "recipientsCc": "",
+        "recipientsBcc": ""
+      },
+      "frequencyTime": "2022-04-17T07:39:10.126Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T07:39:28.612Z",
+      "workflowName": "Missed Closed Date",
+      "frequency": "",
+      "entity": "lead",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"Missed Closed Date\",\"wrap\":true}],\"actions\":[{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 5
+    },
+    {
+      "actions": [],
+      "conditions": [
+        {
+          "attributeValue": "200",
+          "operator": "greaterthan",
+          "conditionsOperator": ""
+        },
+        {
+          "attributeValue": "today",
+          "operator": "equal",
+          "conditionsOperator": "Or"
+        }
+      ],
+      "template": {
+        "description": "",
+        "createdBy": "User",
+        "title": "",
+        "type": "team",
+        "recipientsTo": "",
+        "recipientsCc": "",
+        "recipientsBcc": ""
+      },
+      "frequencyTime": "2022-04-17T07:40:30.957Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T07:40:49.653Z",
+      "workflowName": "Missed Closed Date",
+      "frequency": "",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"Missed Closed Date\",\"wrap\":true}],\"actions\":[{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 6
+    },
+    {
+      "actions": [],
+      "conditions": [
+        {
+          "attributeName": "opty.owner.name",
+          "attributeValue": "2000",
+          "operator": "greaterthan",
+          "conditionsOperator": ""
+        },
+        {
+          "attributeName": "@opty.duedate",
+          "attributeValue": "1000",
+          "operator": "lessthan",
+          "conditionsOperator": "And"
+        }
+      ],
+      "template": {
+        "description": "",
+        "createdBy": "User",
+        "title": "",
+        "type": "team",
+        "recipientsTo": "",
+        "recipientsCc": "",
+        "recipientsBcc": ""
+      },
+      "frequencyTime": "2022-04-17T07:42:13.727Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T07:42:30.708Z",
+      "workflowName": "Missed Closed Date",
+      "frequency": "",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"Missed Closed Date\",\"wrap\":true}],\"actions\":[{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 7
+    },
+    {
+      "actions": [
+        {
+          "api": "API",
+          "parameters": "Parameters",
+          "title": "Test",
+          "type": "Action.Submit"
+        },
+        {
+          "api": "",
+          "parameters": "",
+          "title": "",
+          "type": ""
+        }
+      ],
+      "conditions": [],
+      "template": {
+        "description": "MissedClosedDate",
+        "createdBy": "User",
+        "title": "MissedClosedDate",
+        "type": "team",
+        "recipientsTo": "user@test.com",
+        "recipientsCc": "user@test.com",
+        "recipientsBcc": "user@test.com"
+      },
+      "frequencyTime": "2022-04-17T09:33:30.388Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T09:33:40.512Z",
+      "workflowName": "Missed Closed Date New1",
+      "frequency": "",
+      "entity": "lead",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date New1\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"MissedClosedDate\",\"wrap\":true}],\"actions\":[{\"type\":\"Action.Submit\",\"title\":\"Test\",\"api\":\"API\",\"parameters\":\"Parameters\"},{\"type\":\"\",\"title\":\"\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 8
+    },
+    {
+      "actions": [
+        {
+          "api": "API",
+          "parameters": "Parameters",
+          "title": "update1",
+          "type": "Action.Submit"
+        },
+        {
+          "api": "",
+          "parameters": "",
+          "title": "Update2",
+          "type": ""
+        }
+      ],
+      "conditions": [
+        {
+          "attributeName": "opty.owner.name",
+          "attributeValue": "1000",
+          "operator": "equal",
+          "conditionsOperator": ""
+        },
+        {
+          "attributeName": "@opty.duedate",
+          "attributeValue": "today",
+          "operator": "lessthan",
+          "conditionsOperator": "Or"
+        }
+      ],
+      "template": {
+        "description": "MissedClosedDate",
+        "createdBy": "User",
+        "title": "MissedClosedDate",
+        "type": "team,outlook",
+        "recipientsTo": "user@test.com",
+        "recipientsCc": "user@test.com",
+        "recipientsBcc": "user@test.com"
+      },
+      "frequencyTime": "2022-04-17T12:48:19.836Z",
+      "createdBy": "User",
+      "lastExecutedOn": "2022-04-17T12:48:44.965Z",
+      "workflowName": "Missed Closed Date",
+      "frequency": "",
+      "entity": "lead",
+      "isActive": true,
+      "workflowDesc": "Summary",
+      "adaptiveCardJSON": "{\"type\":\"AdaptiveCard\",\"body\":[{\"type\":\"TextBlock\",\"size\":\"Medium\",\"weight\":\"Bolder\",\"text\":\"Missed Closed Date\",\"wrap\":true,\"style\":\"heading\"},{\"type\":\"TextBlock\",\"text\":\"MissedClosedDate\",\"wrap\":true}],\"actions\":[{\"type\":\"Action.Submit\",\"title\":\"update1\",\"api\":\"API\",\"parameters\":\"Parameters\"},{\"type\":\"\",\"title\":\"Update2\",\"api\":\"\",\"parameters\":\"\"}],\"$schema\":\"http://adaptivecards.io/schemas/adaptive-card.json\",\"version\":\"1.4\"}",
+      "id": 9
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-container">
+
+  <div class="navbar-wrapper">
+
+  <button class="navbar-brand" mat-button (click)="routeToHomePage()">Hubber</button>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <span class="nav-link-wrapper">
+          <button mat-button (click)="routeToHomePage()">Home</button>
+        </span>
+      </li>
+    </ul>
+    <div class="log-out-wrapper" >
+
+      <div class="right-nav-links d-flex">
+        <div class="login-name-wrapper">{{loginName}}</div>
+      <ngx-avatar size="35" name="{{loginName}}" class="avatar-wrapper"></ngx-avatar>
+      <div class="setting-wrapper">
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>settings</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" >
+          <!-- <button mat-menu-item (click)="routeToCreateCard()">
+            <span>Create Card</span>
+        </button> -->
+          <button mat-menu-item (click)="routeToCreateNotificaton()">
+                <span>Create Workflow</span>
+          </button>
+          <button (click)="logOut()" mat-menu-item>
+            <span>Log Out</span>
+          </button>
+
+
+        </mat-menu>
+
+      </div>
+      <div>
+
+      </div>
+    </div>
+
+    </div>
+  </div>
+  </div>
+</nav>

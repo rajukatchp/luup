@@ -1,0 +1,60 @@
+:host {
+  align-self: center;
+}
+
+.login-container {
+  height: 40vh;
+  min-height: 300px;
+  align-self: center;
+}
+
+.login-key-wrapper {
+  width: 40vw;
+  min-width: 500px;
+  margin-top: 10px;
+
+  .card-body {
+    padding: 0.5rem;
+  }
+ }
+
+.login-card {
+  width: 40vw;
+  min-width: 500px;
+
+  &__button {
+    width: 200px;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px !important;
+  }
+  .card-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .card-text {
+    height: 10rem;
+
+    .mat-form-field {
+     margin-top: 1rem;
+      width: 95%;
+    }
+
+  }
+
+  .card-text-button-wrapper {
+    text-align: right;
+  }
+}
+
+.sign-in-card {
+  margin-top: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .login-card {
+    width: 90vw;
+  }
+}

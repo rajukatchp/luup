@@ -1,0 +1,30 @@
+
+
+.app-container {
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  align-content: space-between;
+  min-width: 1200px;
+}
+
+.app-container-white-bg {
+  background-color: white;
+}
+.app-container-loggedin {
+
+  min-height: calc(100vh - 80px) !important;
+}
+
+.router-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  align-self: center;
+
+}
+
+.navbar-wrapper {
+  width: 100%;
+}

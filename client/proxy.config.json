@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://luupwebapi.azurewebsites.net/",
+    "secure": false,
+    "loglevel": "debug",
+    "changeOrigin": true
+  }
+}

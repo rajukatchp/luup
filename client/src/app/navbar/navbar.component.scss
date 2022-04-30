@@ -1,0 +1,47 @@
+.navbar-container {
+  padding: 10px;
+  color: #fff;
+}
+
+.log-out-wrapper {
+  text-align: end;
+  margin-right: 20px;
+  display: flex;
+  justify-content: end;
+  min-width: 300px;
+}
+
+.navbar-dark .navbar-brand  {
+  margin-top: 10px;
+}
+
+.navbar-nav {
+  flex: 1;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.right-nav-links {
+  justify-content: space-between;
+ }
+
+ .avatar-wrapper {
+   position: relative;
+   top:2px;
+ }
+
+ .nav-link-wrapper{
+   position: relative;
+   top:8px;
+ }
+
+ .login-name-wrapper {
+   position: relative;
+   top:12px;
+   font-size: 16px;
+   margin-right: 10px;
+ }

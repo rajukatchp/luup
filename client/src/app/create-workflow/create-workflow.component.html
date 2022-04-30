@@ -1,0 +1,456 @@
+<div class="page-container d-flex">
+  <div class="form-container">
+    <form [formGroup]="workFlowForm">
+      <div class="page-header-wrapper d-flex">
+      <div class="page-header mb-3">
+
+
+        <h1>{{pageMode==='Edit' ?' Edit workfow' : 'Create Workflow'}}</h1>
+      </div>
+      <div class="preview-card-wrapper">
+      <button
+        (click)="updatePreview()"
+        type="button"
+        class="btn btn-primary btn-card-preview"
+      >
+        Preview Card
+      </button>
+      <mat-slide-toggle formControlName="enableWorkFlowCtrl">Enable Workflow</mat-slide-toggle>
+    </div>
+    </div>
+      <div class="mb-3">
+        <mat-form-field class="w-25">
+          <mat-label>Select Entity</mat-label>
+          <mat-select formControlName="entityCtrl" matNativeControl required>
+            <mat-option value="lead">Lead</mat-option>
+            <mat-option value="account">Account</mat-option>
+            <mat-option value="contact">Contact</mat-option>
+            <mat-option value="opportunity">Opportunity</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mb-1">
+        <mat-form-field class="w-25">
+          <mat-label>Select Template</mat-label>
+          <mat-select matNativeControl required #selectTemplate formControlName="selectTemplateCtrl">
+
+            <mat-option value="MissedClosedDate">Missed Closed Date</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="mb-3 actions-wrapper d-flex" >
+        <div formArrayName="actions" class="actions-cards-wrapper"
+        *ngFor="let action of actions.controls; let i = index"
+        >
+        <div formGroupName="{{i}}">
+          <div class="card action-card me-2">
+            <div class="card-text">
+              <div class="mb-2"><label>Enter Action Details</label></div>
+              <div class="mb-2 row">
+                <label
+                  attr.for="{{'typeID' + i}}"
+                  class="col-sm-4 col-form-label"
+                  >Title</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="{{'typeID' + i}}"
+                    class="form-control"
+                    formControlName = 'title'
+
+                  />
+
+                </div>
+              </div>
+
+              <div class="mb-2 row">
+                <label
+                  attr.for="{{'typeID' + i}}"
+                  class="col-sm-4 col-form-label"
+                  >Type</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="{{'typeID' + i}}"
+                    class="form-control"
+                    formControlName = 'type'
+                    [matAutocomplete]="auto"
+                  />
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let actionType of actionTypes " [value]="actionType">
+                      {{actionType}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </div>
+              </div>
+              <div class="mb-2 row">
+                <label
+                  attr.for="{{'apiID' + i}}"
+                  class="col-sm-4 col-form-label"
+                  >API
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="{{'apiID' + i}}"
+                    class="form-control"
+                    formControlName = 'api'
+                  />
+                </div>
+              </div>
+              <div class="mb-2 row">
+                <label
+                 attr.for = "{{'parameterID' + i}}"
+                  class="col-sm-4 col-form-label"
+                  >Parameters
+                </label>
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="{{'parameterID' + i}}"
+                    class="form-control"
+                    formControlName = 'parameters'
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          </div> <!-- form group name end-->
+          <!--card end-->
+        </div>
+      </div>
+
+
+      <div class="mb-3 w-75">
+        <label for="workflowSummaryCtrl" class="form-label"
+          >Workflow Summary</label
+        >
+        <textarea
+
+          formControlName="workflowSummaryCtrl"
+          class="form-control"
+          id="workflowSummaryID"
+          placeholder="Workflow summary"
+          rows="2"
+        ></textarea>
+
+      </div>
+      <div class="mb-3 w-25">
+        <label for="inputTemplateTitle" class="form-label">Title</label>
+        <input
+          formControlName="templateTitleCtrl"
+          class="form-control"
+          id="inputTemplateTitle"
+          placeholder="Title"
+        />
+      </div>
+
+      <div class="mb-3 w-75">
+        <label for="TemplateDecription" class="form-label"
+          >Description</label
+        >
+        <textarea
+          formControlName="templateDescriptionCtrl"
+          class="form-control"
+          id="TemplateDecription"
+          placeholder="Text for adaptive card description"
+          rows="3"
+        ></textarea>
+      </div>
+
+      <div class="mb-3 send-card-container">
+        <div class="d-flex">
+          <mat-icon>send_time_extension</mat-icon>
+          <h3 class="h3-class">
+            Send to
+          </h3>
+        </div>
+        <div class="d-flex">
+          <div class="card">
+            <div class="cardComponents">
+              <div class="img-container">
+                <img src="/assets/images/team-logo.png" alt="Dynamics 365" />
+              </div>
+              <input
+                class="custom-checkbox"
+                type="checkbox"
+                id="teamId"
+                name="team"
+                value="team"
+                checked
+                formControlName="teamCtrl"
+              />
+            </div>
+            <div class="cardText">
+              <p>Team</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="cardComponents">
+              <div class="img-container">
+                <img src="/assets/images/outlook.png" alt="Outlook 365" />
+              </div>
+              <input
+                class="custom-checkbox"
+                type="checkbox"
+                id="outlook"
+                name="outlook"
+                value="outlook"
+                formControlName="outlookCtrl"
+              />
+            </div>
+            <div class="cardText">
+              <p>OutLook</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="cardComponents">
+              <div class="img-container">
+                <img src="/assets/images/dynamic.png" alt="Dynamics 365" />
+              </div>
+              <input
+                class="custom-checkbox"
+                type="checkbox"
+                id="dynamics"
+                name="dynamics"
+                value="dynamic365"
+                formControlName="dynamicsCtrl"
+              />
+            </div>
+            <div class="cardText">
+              <p>Dynamics 365</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 d-flex">
+        <mat-form-field class="select-element">
+          <mat-label>Select frequency</mat-label>
+          <mat-select formControlName="frequencyCtrl"  required>
+            <mat-option value="daily">Daily</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <input formControlName="timePickerCtrl"
+         type="datetime-local" class="form-control time-picker-elem"
+         >
+      </div>
+      <div class="mb3"> <!-- recipientsTo Start-->
+        <div class="row recipients-container">
+          <div class="d-flex">
+            <mat-icon>group</mat-icon>
+            <h3 class="h3-class">
+              Recipients To
+            </h3>
+          </div>
+
+          <div class="d-flex">
+            <mat-form-field class="input-add-reciepient" appearance="outline">
+              <input formControlName="reciepientToCtrl"
+              matInput placeholder="Add reciepient" #inputReceipientTo
+              [matAutocomplete]="reciepientTo" />
+              <mat-autocomplete autoActiveFirstOption #reciepientTo="matAutocomplete">
+                <mat-option *ngFor="let receipient of ReceipientTypes" [value]="receipient">
+                  {{receipient}}
+                </mat-option>
+              </mat-autocomplete>
+
+            </mat-form-field>
+
+            <button
+              (click)="addRecipientsToList(inputReceipientTo.value)"
+              mat-icon-button
+              [disabled]="inputReceipientTo.value.length === 0"
+              color="primary"
+              aria-label="Example icon button with a home icon"
+            >
+              <span class="btn_auidence_plus">+</span>
+            </button>
+          </div>
+
+          <mat-chip-list #chipList class="matchipset_wrapper">
+            <mat-chip *ngFor="let receipient of recipientsToList"
+            (removed)="removerecipientsToFromList(receipient)">{{
+              receipient
+            }}<button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip>
+
+          </mat-chip-list>
+        </div>
+        <!--recipients-container end-->
+      </div> <!--recipientsTo end-->
+      <div class="mb3"> <!-- recipientsCc start-->
+        <div class="row recipients-container">
+          <div class="d-flex">
+            <mat-icon>group</mat-icon>
+            <h3 class="h3-class">
+              Receipient CC
+            </h3>
+          </div>
+
+          <div class="d-flex">
+            <mat-form-field class="input-add-reciepient" appearance="outline">
+              <input formControlName="reciepientCcCtrl"
+              matInput placeholder="Add reciepient" #inputReceipientCC
+              [matAutocomplete]="reciepientCC" />
+              <mat-autocomplete autoActiveFirstOption #reciepientCC="matAutocomplete">
+                <mat-option *ngFor="let receipient of ReceipientTypes" [value]="receipient">
+                  {{receipient}}
+                </mat-option>
+              </mat-autocomplete>
+
+            </mat-form-field>
+
+            <button
+              (click)="addRecipientsCcList(inputReceipientCC.value)"
+              mat-icon-button
+              [disabled]="inputReceipientCC.value.length === 0"
+              color="primary"
+              aria-label="Example icon button with a home icon"
+            >
+              <span class="btn_auidence_plus">+</span>
+            </button>
+          </div>
+
+          <mat-chip-list #chipList class="matchipset_wrapper">
+            <mat-chip *ngFor="let recipients of recipientsCcList" (removed)="removeRecipientsCcList(recipients)">{{
+              recipients
+            }}<button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip>
+          </mat-chip-list>
+        </div>
+        <!--recipients-container end-->
+      </div> <!--recipientsCc end-->
+      <div class="mb3 nb-4"> <!-- recipientsCc start-->
+        <div class="row recipients-container">
+          <div class="d-flex">
+            <mat-icon>group</mat-icon>
+            <h3 class="h3-class">
+              Recipients Bcc
+            </h3>
+          </div>
+
+          <div class="d-flex">
+            <mat-form-field class="input-add-reciepient" appearance="outline">
+              <input formControlName="recipientsBccCtrl"
+              matInput placeholder="Add reciepient" #inputReceipientBcc
+              [matAutocomplete]="reciepientCC" />
+              <mat-autocomplete autoActiveFirstOption #reciepientCC="matAutocomplete">
+                <mat-option *ngFor="let receipient of ReceipientTypes" [value]="receipient">
+                  {{receipient}}
+                </mat-option>
+              </mat-autocomplete>
+
+            </mat-form-field>
+
+            <button
+              (click)="addRecipientsBCcList(inputReceipientBcc.value)"
+              mat-icon-button
+              [disabled]="inputReceipientBcc.value.length === 0"
+              color="primary"
+              aria-label="Example icon button with a home icon"
+            >
+              <span class="btn_auidence_plus">+</span>
+            </button>
+          </div>
+
+          <mat-chip-list #chipList class="matchipset_wrapper">
+            <mat-chip *ngFor="let recipients of recipientsBccList"
+            (removed)="addRecipientsBCcList(recipients)">{{
+              recipients
+            }}<button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip>
+          </mat-chip-list>
+        </div>
+        <!--recipients-container end-->
+      </div> <!--recipientsCc end-->
+      <div class="notification-wrapper row conditions-details-wrapper">
+
+          <div class="send-notication-text-wrapper first-col">
+            <h3>Send notification if</h3>
+          </div>
+          <div formArrayName="workFlowConditions" class="condition-wrapper"
+          *ngFor="let condition of workFlowConditions.controls; let i = index"
+          >
+          <div formGroupName="{{i}}" class="d-flex">
+
+          <div class="me-3">
+            <mat-form-field class="select-operator-wrapper" id="{{'conditionOperator'+ i}}">
+            <mat-select  formControlName="conditionsOperator">
+              <mat-option value="And">And</mat-option>
+              <mat-option value="Or">Or</mat-option>
+            </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="select-wrapper me-3">
+            <mat-form-field>
+              <mat-select matNativeControl  formControlName="attributeName">
+                <mat-option value="opty.owner.name">opty.owner.name</mat-option>
+                <mat-option value="@opty.name">@opty.name</mat-option>
+                <mat-option value="@opty.duedate">@opty.duedate</mat-option>
+
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="select_wrapper me-3">
+            <mat-form-field>
+              <mat-select  formControlName="operator">
+                <mat-option value="greaterthan">Greater than</mat-option>
+                <mat-option value="equal">Equal</mat-option>
+                <mat-option value="lessthan">Less Than</mat-option>
+
+              </mat-select>
+            </mat-form-field>
+
+
+          </div>
+          <div class="inpur_wrapper">
+            <mat-form-field class="example-full-width" >
+              <input matInput placeholder="" formControlName="attributeValue" />
+            </mat-form-field>
+          </div>
+          </div><!-- condition-wrapper end-->
+        </div>
+
+
+        <div class="add-row-condition">
+          <button id="btn-add-condition" (click)="addCondition()" mat-button>
+            <span class="add-row-condition-plus me-2">+</span>Add a condition
+          </button>
+
+        </div>
+      </div>
+    </form>
+    <div class="btn-wrapper d-flex">
+      <button
+        (click)="resetForm()"
+        type="button"
+        class="btn btn-secondary btn-save"
+      >
+        Reset
+      </button>
+      <button
+        (click)="saveForm()"
+        type="button"
+        class="btn btn-primary btn-save"
+
+
+      >
+        Save
+      </button>
+    </div>
+  </div>
+
+  <div class="adaptive-card-wrapper">
+    <div #cardContainer class="card-container mat-elevation-z8"></div>
+  </div>
+
+
+</div>
+

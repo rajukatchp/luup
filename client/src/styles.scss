@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  font-family: Roboto,Helvetica Neue,sans-serif;
+
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: lightgrey;
+  // background-image: url("./assets/images/laptopbg.jpg");
+  // background-repeat: no-repeat, repeat;
+
+}
+
+.app-mat-icon {
+  position: relative;
+  top: 5px;
+}
+
+.header-secondary-page {
+  h4 {
+    position: relative;
+    top: -10px;
+  }
+}
+
+
+.ac-pushButton {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px 5px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 31px;
+  background-color: white;
+  color: #0079db;
+  border: 1px solid #6290FF;
+  min-width: 100px;
+}
+
+.navbar-select-element {
+  .mat-select-value-text {
+  color: #fff !important;
+  }
+}
+
+
+
+th.mat-header-cell {
+  font-size: 14px;
+  font-weight: bold;
+}

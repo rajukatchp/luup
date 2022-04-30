@@ -1,0 +1,221 @@
+{
+	"type": "AdaptiveCard",
+	"hideOriginalBody": "true",
+	"originator": "0605b9cd-b26b-4850-9e19-71c6fbc3c1a1",
+	"body": [
+		{
+			"type": "ColumnSet",
+			"columns": [
+				{
+					"type": "Column",
+					"items": [
+						{
+							"type": "Image",
+							"url": "https://arstorageaccountdev.blob.core.windows.net/adaptive-cards/microsoft-logo-small.png?sp=rl&st=2020-04-01T11:36:24Z&se=2070-04-02T11:36:00Z&sv=2019-02-02&sr=b&sig=lh1moR0uL%2F%2FbFoLbuYmTisyjtxfXkbWk%2BjkEPKIjC9g%3D",
+							"size": "medium"
+						}
+					],
+					"width": "stretch",
+					"padding": "None"
+				},
+				{
+					"type": "Column",
+					"items": [
+						{
+							"type": "TextBlock",
+							"text": "Planning and Execution Tool",
+							"size": "small",
+							"horizontalAlignment": "right",
+							"weight": "bolder"
+						}
+					],
+					"width": "stretch",
+					"padding": "None",
+					"verticalContentAlignment": "Center"
+				}
+			],
+			"padding": "None"
+		},
+		{
+			"type": "ColumnSet",
+			"columns": [
+				{
+					"type": "Column",
+					"items": [
+						{
+							"type": "Image",
+							"style": "Person",
+							"url": "https://arstorageaccountdev.blob.core.windows.net/adaptive-cards/card_icon_cropped.png?sp=rl&st=2020-04-01T11:34:59Z&se=2070-04-01T11:34:00Z&sv=2019-02-02&sr=b&sig=%2FlIQPfFjqn1pPVugaNlcIdlJmjG2zg3Vpgsm3dno2M4%3D",
+							"size": "medium"
+						}
+					],
+					"width": "auto",
+					"padding": "None"
+				}
+			],
+			"padding": "None"
+		},
+		{
+			"type": "TextBlock",
+			"weight": "Bolder",
+			"size": "ExtraLarge",
+			"text": "You have an IO approval request!",
+			"wrap": true
+		},
+		{
+			"type": "ActionSet",
+			"actions": [
+				{
+					"type": "Action.OpenUrl",
+					"title": "View IO in Planning Tool",
+					"url": "[@viewDetailsUrl]",
+					"style": "positive",
+					"isPrimary": true
+				}
+			]
+		},
+		{
+			"type": "TextBlock",
+			"text": "IO Details:",
+			"separator": true,
+			"spacing": "ExtraLarge",
+			"size": "Medium",
+			"weight": "Bolder"
+		},
+		{
+			"type": "FactSet",
+			"facts": [
+				{
+					"title": "Fiscal Year:",
+					"value": "[@fiscalYear]"
+				},
+				{
+					"title": "Organization:",
+					"value": "[@orgHierarchy]"
+				},
+				{
+					"title": "Group:",
+					"value": "[@group]"
+				},
+				{
+					"title": "Sub-Group:",
+					"value": "[@subgroup]"
+				},
+				{
+					"title": "Initiative Name:",
+					"value": "[@initiativeName]"
+				},
+				{
+					"title": "Initiative ID:",
+					"value": "[@initiativeId]"
+				},
+				{
+					"title": "IO Name:",
+					"value": "[@ioname]"
+				},
+				{
+					"title": "IO Owner:",
+					"value": "[@ioowner]"
+				},
+				{
+					"title": "Profit Center Code:",
+					"value": "[@profitcenter]"
+				},
+				{
+					"title": "Company code:",
+					"value": "[@companycode]"
+				},
+				{
+					"title": "Tax Jurisdiction Code:",
+					"value": "[@taxjurisdictioncode]"
+				}
+			]
+		},
+		{
+			"type": "ColumnSet",
+			"columns": [
+				{
+					"type": "Column",
+					"items": [
+						{
+							"type": "Input.Text",
+							"id": "justificationText[@ActionsMessageId]",
+							"isMultiline": true,
+							"placeholder": "Please enter justification"
+						}
+					],
+					"width": "stretch",
+					"padding": "None"
+				}
+			],
+			"padding": "None"
+		},
+		{
+			"type": "TextBlock",
+			"text": "In case of any questions, please contact or reach our support team [Commercial Marketing Application Support](mailTo:askmksup@microsoft.com)",
+			"wrap": true
+		},
+		{
+			"type": "ActionSet",
+			"id": "petActions[@ActionsMessageId]",
+			"actions": [
+				{
+					"type": "Action.Http",
+					"title": "Approve",
+					"url": "https://apportalnotificationuatsf.trafficmanager.net:8083/api/v1/noru/emailActionsV2",
+					"method": "POST",
+					"style": "positive",
+					"isPrimary": true,
+					"body": "{\"TargetURL\": \"https://pet-initiativemanagement-api-dev.azurewebsites.net/api/io/approverejectios/?\",\n  \"ActionType\": 2,\n  \"ActionCategory\": 13,\n  \"MessageId\": \"[@ActionsMessageId]\",\n  \"MessageCorrelationId\": \"[@ActionsMessageCorrelationId]\",\n\"SchemaName\": \"[@SchemaName]\",\n \"NotificationType\": \"[@NotificationType]\",  \"Data\": {\"JArrayData\": [{\"id\" : \"[@entityId]\",\"parent_id\": \"[@parentId]\",\"org_id\": \"[@orgId]\",\"type\": 3,\"unique_id\": [@entityId],\"status\":\"Enabled\",\"iocreatenotes\": \"{{justificationText[@ActionsMessageId].value}}\"}]},  \"Headers\":{},\"convertDataToDictionary\": true}"
+				},
+				{
+					"type": "Action.Http",
+					"title": "Reject",
+					"url": "https://apportalnotificationuatsf.trafficmanager.net:8083/api/v1/noru/emailActionsV2",
+					"method": "POST",
+					"style": "positive",
+					"isPrimary": true,
+					"body": "{\"TargetURL\": \"https://pet-initiativemanagement-api-dev.azurewebsites.net/api/io/approverejectios/?\",\n  \"ActionType\": 2,\n  \"ActionCategory\": 13,\n  \"MessageId\": \"[@ActionsMessageId]\",\n  \"MessageCorrelationId\": \"[@ActionsMessageCorrelationId]\",\n\"SchemaName\": \"[@SchemaName]\",\n \"NotificationType\": \"[@NotificationType]\",  \"Data\": {\"JArrayData\": [{\"id\" : \"[@entityId]\",\"parent_id\": \"[@parentId]\",\"org_id\": \"[@orgId]\",\"type\": 3,\"unique_id\": [@entityId],\"status\":\"Rejected\",\"iocreatenotes\": \"{{justificationText[@ActionsMessageId].value}}\"}]},  \"Headers\":{},\"convertDataToDictionary\": true}"
+				}
+			]
+		},
+		{
+			"type": "TextBlock",
+			"text": "Thanks,",
+			"size": "Medium",
+			"spacing": "Medium",
+			"weight": "Bolder",
+			"wrap": true
+		},
+		{
+			"type": "TextBlock",
+			"spacing": "None",
+			"text": "The Planning Team",
+			"size": "Medium",
+			"wrap": true
+		},
+		{
+			"items": [
+				{
+					"size": "Small",
+					"text": "Click [here]([@AdaptiveCardUnSubscribeUrl]) to unsubscribe from this notification.",
+					"type": "TextBlock"
+				},
+				{
+					"type": "TextBlock",
+					"spacing": "None",
+					"text": "Click [here]([@AdaptiveCardUnSubscribeUIUrl]) to manage all notifications.",
+					"size": "Small",
+					"wrap": true
+				}
+			],
+			"type": "Container",
+			"id": "UnsubscribeContainer",
+			"style": "default",
+			"padding": "None"
+		}
+	],
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"version": "1.0",
+	"padding": "Default"
+}

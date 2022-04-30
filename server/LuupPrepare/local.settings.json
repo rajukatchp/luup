@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureWebJobsServiceBus": "Endpoint=sb://generationtodelivery.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=2SZMJp9wcq+uU9Fd316J43nXa3TINuMEm57/EBGc8j0=",
+    "TopicName": "testentity",
+    "MyTimer": "0 */2 * * * *",
+    "WorkflowAPIURL": "https://localhost:44333/api/Workflows",
+    "LuupAPIURL": "https://luupapi.azurewebsites.net/weatherforecast"
+  }
+} 

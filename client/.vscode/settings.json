@@ -1,0 +1,5 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3df4419e-c2d4-416e-b59f-b003b7ff0257/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/luupwebsitetest",
+    "appService.deploySubpath": "dist\\luup-app",
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}

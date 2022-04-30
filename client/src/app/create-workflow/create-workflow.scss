@@ -1,0 +1,178 @@
+:host {
+  width: 100%;
+}
+
+.page-container {
+
+  height: 100%;
+}
+
+.page-header{
+  flex: 1;
+}
+
+.preview-card-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    margin-bottom: 10px;
+  }
+}
+.adaptive-card-wrapper {
+  flex: 1;
+  background-color: #eaeaea;
+  min-width: 400px;
+  padding: 10px;
+  height: 100%;
+
+}
+
+.form-container {
+  width: 80%;
+  margin: 10px;
+  margin-right: 20px;
+  flex: 3;
+  padding:10px;
+}
+
+.select-element, .input-element {
+  width: 400px;
+}
+
+.send-card-container {
+
+  width: 800px;
+
+  .card {
+    margin-right: 20px;
+    flex: 1;
+    height: 150px;
+    .cardComponents {
+      text-align: center;
+      .img-container {
+        height: 100px;
+        img {
+        width: 100px;
+        height: auto;
+        }
+      }
+
+      input {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        height: 20px;
+        width: 20px;
+      }
+
+
+    }
+
+    .cardText {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: bold;
+
+
+    }
+  }
+}
+
+.btn-card-preview {
+  float: right;
+}
+
+.input-add-reciepient {
+  width: 400px;
+
+}
+
+.btn_auidence_plus{
+  font-size: 24px;
+  margin-left: 10px;
+  position: relative;
+  top: 10px;
+}
+
+.matchipset_wrapper {
+  position: relative;
+  left: 10px;
+  top: -15px;
+}
+
+.btn-wrapper {
+  float: right;
+  button {
+    margin-right: 20px;
+  }
+}
+
+.card-actions-title-container {
+  width: 700px;
+  input {
+    margin-right: 20px;
+  }
+}
+
+.notification-detail-wrapper {
+  flex-grow: 3;
+  padding: 15px;
+  position: relative;
+
+  .slide-enable-notification-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+  }
+  .row {
+    margin-bottom: 20px;
+
+    h3 {
+      margin-left: 5px;
+    }
+  }
+}
+
+.condition-row {
+  div {
+    min-width: 10% !important;
+    margin-right: 5px;
+  }
+
+  .first-col {
+    width: 120px;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+.actions-cards-wrapper {
+  .action-card {
+    padding: 1rem;
+  .row {
+    margin-bottom: 10px;
+  }
+}
+
+}
+
+.action-card {
+  width: 400px;
+}
+
+.select-operator-wrapper {
+  width: 130px;
+}
+
+#conditionOperator0 {
+  visibility: hidden;
+}
+
+.time-picker-elem{
+    width: 200px;
+    margin-left: 20px;
+    height: 40px;
+}

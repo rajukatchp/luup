@@ -1,0 +1,20 @@
+
+<div class="container-fluid  app-container d-flex">
+
+<div class="navbar-wrapper"  *ngIf="isUserLoggedIn" >
+  <app-navbar></app-navbar>
+</div>
+
+<div class="app-body-container d-flex w-100"
+  [ngClass]="{'app-container-white-bg': isUserLoggedIn}"
+   >
+
+
+  <div class="router-container"
+  [ngClass]="{'app-container-loggedin': isUserLoggedIn}">
+
+    <router-outlet> </router-outlet>
+
+  </div>
+</div>
+</div>

@@ -1,0 +1,46 @@
+<div class="login-container">
+
+
+  <div class="card login-card" >
+    <div class="card-body">
+      <h2 class="card-title mb2">Hubber</h2>
+      <h6 class="card-subtitle mb2 ">Sign In</h6>
+      <div class="card-text">
+
+        <form class="login-card__form">
+          <mat-form-field class="login-card__item">
+            <mat-label>Email </mat-label>
+            <input matInput />
+          </mat-form-field>
+        </form>
+      </div>
+
+      <div class="card-text-button-wrapper">
+      <button
+      (click)="LoginClickHandler()"
+      mat-raised-button
+      color="primary"
+      class="login-card__button btn-primary"
+
+    >
+      Next
+    </button>
+    </div>
+    </div>
+    </div>
+    <div class="login-key-wrapper  card">
+      <div class="card-body">
+    <mat-icon
+    aria-hidden="false"
+    aria-label="Example home icon"
+    class="app-mat-icon"
+    >key</mat-icon
+  >
+  <button mat-button  (click)="LoginClickHandler()" color="primary">
+   LOGIN
+  </button>
+  </div>
+</div>
+
+
+  </div>
