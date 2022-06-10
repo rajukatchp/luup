@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuupWebAPI", "LuupWebAPI\LuupWebAPI.csproj", "{D054E312-E445-437E-BC0F-4F5B44387255}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D054E312-E445-437E-BC0F-4F5B44387255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D054E312-E445-437E-BC0F-4F5B44387255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D054E312-E445-437E-BC0F-4F5B44387255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D054E312-E445-437E-BC0F-4F5B44387255}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D30AB070-FF0D-47F8-97BC-2699002AB705}
+	EndGlobalSection
+EndGlobal
