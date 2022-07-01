@@ -12,5 +12,8 @@ namespace LuupWebAPI.Models
 
         public DbSet<Workflow> Workflow { get; set; }
         public DbSet<Template> Template { get; set; }
+        public DbSet<Actions> Actions { get; set; }
+        public DbSet<Conditions> Conditions { get; set; }
+        
     }    
 }

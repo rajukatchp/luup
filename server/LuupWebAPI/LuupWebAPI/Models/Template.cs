@@ -2,7 +2,7 @@
 
 namespace LuupWebAPI.Models
 {
-    public partial class Template
+    public  class Template
     {
         public int Id { get; set; }
         public string Title { get; set; }

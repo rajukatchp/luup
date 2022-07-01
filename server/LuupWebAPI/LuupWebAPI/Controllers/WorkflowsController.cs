@@ -33,13 +33,6 @@ namespace LuupWebAPI
             return await _workflowRepository.GetWorkflowsById(id);
         }
 
-        [HttpGet]
-        [Route("api/GetWorkflowByName/{name}")]
-        public async Task<ActionResult<Workflow>> GetWorkflowByName(string name)
-        {
-            return await _workflowRepository.GetWorkflowsByName(name);
-        }
-
         [HttpPut]
         [Route("api/UpdateWorkflows")]
         public async Task<ActionResult> UpdateWorkflows(int id, [FromBody] Workflow workflow)
@@ -61,6 +54,17 @@ namespace LuupWebAPI
             var newWorkflow = await _workflowRepository.Create(workflow);
             return CreatedAtAction(nameof(GetWorkflows), new { id = newWorkflow.Id }, newWorkflow);
         }
-    
+
+        [HttpDelete]
+        [Route("api/DeleteWorkflows")]
+        public async Task<ActionResult> DeleteWorkflow(int id)
+        {
+            var workflowToDelete = await _workflowRepository.GetWorkflowsById(id);
+            if (workflowToDelete == null)
+                return NotFound();
+
+            await _workflowRepository.Delete(workflowToDelete.Id);
+            return NoContent();
+        }    
     }
 }

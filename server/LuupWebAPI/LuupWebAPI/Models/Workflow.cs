@@ -1,6 +1,6 @@
 ﻿namespace LuupWebAPI.Models
 {
-    public partial class Workflow
+    public  class Workflow
     {
         public int Id { get; set; }
         public string workflowName { get; set; }
@@ -14,6 +14,11 @@
         public string? ModifiedBy { get; set; }
         public bool isActive { get; set; }
         public string Entity { get; set; }
-        public string AdaptiveCardJSON { get; set; }
+        public string AdaptiveCardJSON { get; set; }        
+        public ICollection<Actions>? Actions { get; set; }
+        public Template? Template { get; set; }
+
+        public ICollection<Conditions>? Conditions { get; set; }
     }
+   
 }
